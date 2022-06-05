@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app='LunchCheck'>
+  <head>
+    <title>Lunch Checker</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
+
+  <body>
+    <h1>Lunch Checker</h1>
+    <div ng-controller='LunchCheckController'>
+      <input id="lunch-menu" type="text" ng-model="name"
+      placeholder="List comma separated dishes you usually have for lunch"
+      style = "width: 450px; border-color: {{bkcolor}}">
+
+      <button ng-click="checkLunch()">Check If Too Much</button>
+      <!-- Your message can go here. -->
+      <div id="comment" style = "color: {{bkcolor}}"><br>{{results}}</div>
+    </div>
+
+ </body>
+</html>
